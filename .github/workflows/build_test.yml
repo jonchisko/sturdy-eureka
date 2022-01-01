@@ -16,8 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Prepare bevy essentials
+    - name: Prepare alsa
       run: sudo apt-get install librust-alsa-sys-dev
+    - name: Prepare libudev
+      run: sudo apt-get install libudev-dev
     - name: Build
       run: cargo build --verbose
     - name: Run tests
