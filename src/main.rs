@@ -1,6 +1,5 @@
 use bevy::prelude::*;
 
-
 fn main() {
     App::build()
         .add_startup_system(add_people.system())
@@ -14,8 +13,12 @@ struct Person;
 struct Name(String);
 
 fn add_people(mut cmds: Commands) {
-    cmds.spawn().insert(Person).insert(Name("Krin Mijevski".to_string()));
-    cmds.spawn().insert(Person).insert(Name("Siri Sirovich".to_string()));
+    cmds.spawn()
+        .insert(Person)
+        .insert(Name("Krin Mijevski".to_string()));
+    cmds.spawn()
+        .insert(Person)
+        .insert(Name("Siri Sirovich".to_string()));
 }
 
 fn greet_people(query: Query<&Name, With<Person>>) {
