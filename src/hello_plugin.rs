@@ -1,5 +1,5 @@
-use bevy::prelude::{Plugin, IntoSystem, Commands, Query, With, Res, ResMut};
 use bevy::core::{Time, Timer};
+use bevy::prelude::{Commands, IntoSystem, Plugin, Query, Res, ResMut, With};
 
 pub struct HelloPlugin;
 
